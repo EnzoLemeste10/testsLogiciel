@@ -11,20 +11,23 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SpringBootTest
-public class VoitureTest {
+package com.example.demo.data;
 
-    private Voiture tuture;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-    @BeforeEach
-    void setUp(){
-        tuture = new Voiture("Ferrari", 200000);
-    }
-
+class VoitureTest {
 
     @Test
-    void testGetters(){
-        Assertions.assertEquals(200000, tuture.getPrix(), "Le prix doit être 200000");
-        Assertions.assertEquals("Ferrari", tuture.getMarque(), "La marque doit être Ferrari");
+    void creerVoiture() {
+        // 1. Instancier l'objet (adapte les paramètres selon le constructeur de Voiture.java)
+        Voiture voiture = new Voiture("Tesla", "Model 3");
+
+        // 2. Vérifier que l'objet n'est pas nul
+        assertNotNull(voiture);
+
+        // 3. Vérifier que les getters retournent les bonnes valeurs
+        assertEquals("Tesla", voiture.getMarque());
+        assertEquals("Model 3", voiture.getModele());
     }
 }
