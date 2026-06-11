@@ -1,4 +1,4 @@
-ppackage com.example.demo.web;
+package com.example.demo.web;
 
 import com.example.demo.data.Voiture;
 import com.example.demo.service.Echantillon;
