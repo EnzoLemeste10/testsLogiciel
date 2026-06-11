@@ -12,7 +12,6 @@ class StatistiqueTests {
     void testPrixMoyenAvecSucces() {
         StatistiqueImpl statistiqueService = new StatistiqueImpl();
 
-        // Correction ici : constructeur à 2 arguments (Marque, Prix)
         Voiture v1 = new Voiture("Peugeot", 10000);
         Voiture v2 = new Voiture("Renault", 20000);
 
